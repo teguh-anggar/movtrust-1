@@ -1,0 +1,619 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Movtrust | Expat Relocation Lombok</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#dfe2eb",
+              "primary-container": "#e8a045",
+              "surface-container": "#ebeef7",
+              "primary-fixed-dim": "#ffb964",
+              "surface-variant": "#dfe2eb",
+              "on-surface": "#181c22",
+              "on-primary": "#ffffff",
+              secondary: "#5b5e66",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#00504c",
+              "on-tertiary-container": "#004b47",
+              "on-primary-fixed": "#2b1700",
+              "on-secondary-fixed-variant": "#43474e",
+              "surface-tint": "#875300",
+              "primary-fixed": "#ffddb9",
+              primary: "#875300",
+              "tertiary-fixed-dim": "#5dd9d0",
+              "outline-variant": "#d6c3b1",
+              "surface-container-high": "#e5e8f1",
+              "on-secondary-container": "#61646c",
+              "on-primary-container": "#603900",
+              "secondary-container": "#dfe2eb",
+              "tertiary-container": "#3fc1b8",
+              "surface-dim": "#d7dae3",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#eef0f9",
+              "on-surface-variant": "#524437",
+              "inverse-surface": "#2d3137",
+              "on-background": "#181c22",
+              "on-primary-fixed-variant": "#663e00",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#c3c6cf",
+              "inverse-primary": "#ffb964",
+              tertiary: "#006a65",
+              "on-tertiary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#dfe2eb",
+              background: "#f8f9ff",
+              error: "#ba1a1a",
+              "surface-container-low": "#f1f3fc",
+              surface: "#f8f9ff",
+              "surface-bright": "#f8f9ff",
+              "on-secondary-fixed": "#181c22",
+              "on-tertiary-fixed": "#00201e",
+              outline: "#847465",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed": "#7cf6ec",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .bg-glass {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(135, 83, 0, 0.05) 0%,
+          rgba(232, 160, 69, 0.05) 100%
+        );
+      }
+      .cta-gradient {
+        background: linear-gradient(135deg, #875300 0%, #e8a045 100%);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none"
+    >
+      <div
+        class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <span
+            class="material-symbols-outlined text-amber-700 dark:text-amber-500 text-3xl"
+            data-icon="waves"
+            >waves</span
+          >
+          <span
+            class="text-2xl font-serif italic text-amber-800 dark:text-amber-200"
+            >Movtrust</span
+          >
+        </div>
+        <nav class="hidden md:flex items-center space-x-10">
+          <a
+            class="text-amber-800 dark:text-amber-400 font-semibold border-b-2 border-amber-800 font-label text-sm tracking-wide"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-amber-700 transition-colors font-label text-sm tracking-wide"
+            href="#"
+            >Visa Services</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-amber-700 transition-colors font-label text-sm tracking-wide"
+            href="#"
+            >Real Estate</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-amber-700 transition-colors font-label text-sm tracking-wide"
+            href="#"
+            >Transport</a
+          >
+        </nav>
+        <button
+          class="cta-gradient text-on-primary px-8 py-3 rounded-md font-label font-semibold text-sm tracking-tight hover:opacity-90 transition-all active:scale-95"
+        >
+          Get Started
+        </button>
+      </div>
+      <div class="bg-slate-100 dark:bg-slate-800 h-px w-full opacity-20"></div>
+    </header>
+    <main class="pt-24">
+      <!-- Hero Section -->
+      <section
+        class="relative min-h-[795px] flex items-center overflow-hidden px-8"
+      >
+        <div
+          class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        >
+          <div class="lg:col-span-7 z-10">
+            <h1
+              class="font-headline text-6xl md:text-7xl lg:text-8xl text-on-surface leading-[1.1] tracking-tight mb-8"
+            >
+              Your <span class="italic text-primary">Seamless</span> Transition
+              to Lombok Living.
+            </h1>
+            <p
+              class="text-secondary text-lg md:text-xl max-w-xl mb-12 leading-relaxed"
+            >
+              Navigate the complexities of international relocation with the
+              expertise of Lombok's premier concierge service. From legalities
+              to lifestyle, we anchor your new beginning.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+              <button
+                class="cta-gradient text-on-primary px-10 py-5 rounded-md font-label font-bold text-base shadow-xl shadow-primary/10 hover:opacity-90 transition-all"
+              >
+                Start Your Journey
+              </button>
+              <button
+                class="bg-transparent border border-outline-variant/30 text-primary px-10 py-5 rounded-md font-label font-bold text-base hover:bg-surface-container transition-colors"
+              >
+                Explore Services
+              </button>
+            </div>
+          </div>
+          <div class="lg:col-span-5 relative">
+            <div
+              class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative z-20"
+            >
+              <img
+                alt="Luxury villa overlooking the ocean"
+                class="w-full h-full object-cover"
+                data-alt="Luxurious modern villa infinity pool overlooking a turquoise tropical bay in Lombok with palm trees and soft golden sunset lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3g7u4kdCkHGgywurvDfYurHPN5NZ2oTid8tk8FdKepNgR269tigs_07v4sIsjaJOkiGNe8bduDdzKUPyTyMqahAo6S2DFGwSyW_jOjc236DlnzHsvauT93IDmzcz0b2qOeKumKocN8c0KGMcAh4xYjs-9SbVr0gaakBnsdzrWTIMw7BH7TzNFWamx9Em4O4W-Tg9-9UNyVmUr35VER1cRU5wb9lGC8vt6UrzDDeWItTPoUWv6pCShvmU6Qu6qyR34IISlYyoYIlo"
+              />
+            </div>
+            <!-- Decorative Element -->
+            <div
+              class="absolute -bottom-10 -left-10 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl -z-10"
+            ></div>
+            <div
+              class="absolute -top-10 -right-10 w-48 h-48 bg-tertiary-container/20 rounded-full blur-2xl -z-10"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Services Section: Bento Style -->
+      <section class="py-32 px-8 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-20">
+            <h2 class="font-headline text-4xl md:text-5xl text-on-surface mb-6">
+              Curated Services
+            </h2>
+            <div class="w-24 h-1 bg-primary rounded-full"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Visa & Immigration -->
+            <div
+              class="md:col-span-2 bg-surface-container-lowest p-12 rounded-xl group hover:bg-surface transition-all duration-500 relative overflow-hidden"
+            >
+              <div
+                class="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity"
+              >
+                <span
+                  class="material-symbols-outlined text-9xl"
+                  data-icon="description"
+                  >description</span
+                >
+              </div>
+              <span
+                class="material-symbols-outlined text-primary text-4xl mb-8"
+                data-icon="verified_user"
+                >verified_user</span
+              >
+              <h3 class="font-headline text-3xl mb-4">
+                Visa &amp; Immigration
+              </h3>
+              <p class="text-secondary text-lg max-w-md mb-8 leading-relaxed">
+                Expert navigation of KITAS, social visas, and long-term
+                residency requirements. We handle the paperwork, you handle the
+                packing.
+              </p>
+              <a
+                class="text-primary font-bold flex items-center gap-2 group/link"
+                href="#"
+              >
+                Learn More
+                <span
+                  class="material-symbols-outlined transition-transform group-hover/link:translate-x-2"
+                  data-icon="arrow_forward"
+                  >arrow_forward</span
+                >
+              </a>
+            </div>
+            <!-- Accommodation -->
+            <div
+              class="bg-surface-container-lowest p-12 rounded-xl group hover:bg-surface transition-all duration-500"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-4xl mb-8"
+                data-icon="real_estate_agent"
+                >real_estate_agent</span
+              >
+              <h3 class="font-headline text-3xl mb-4">Accommodation Finder</h3>
+              <p class="text-secondary text-lg mb-8 leading-relaxed">
+                Securing premium villas and land in Lombok’s most sought-after
+                enclaves.
+              </p>
+              <a
+                class="text-primary font-bold flex items-center gap-2"
+                href="#"
+              >
+                Explore Listings
+                <span
+                  class="material-symbols-outlined"
+                  data-icon="chevron_right"
+                  >chevron_right</span
+                >
+              </a>
+            </div>
+            <!-- Transport -->
+            <div
+              class="bg-surface-container-lowest p-12 rounded-xl group hover:bg-surface transition-all duration-500"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-4xl mb-8"
+                data-icon="directions_car"
+                >directions_car</span
+              >
+              <h3 class="font-headline text-3xl mb-4">
+                Transport &amp; Logistics
+              </h3>
+              <p class="text-secondary text-lg mb-8 leading-relaxed">
+                Private airport transfers, vehicle rentals, and international
+                shipping management.
+              </p>
+              <a
+                class="text-primary font-bold flex items-center gap-2"
+                href="#"
+              >
+                View Services
+                <span
+                  class="material-symbols-outlined"
+                  data-icon="chevron_right"
+                  >chevron_right</span
+                >
+              </a>
+            </div>
+            <!-- Concierge -->
+            <div
+              class="md:col-span-2 bg-surface-container-lowest p-12 rounded-xl group hover:bg-surface transition-all duration-500 flex flex-col md:flex-row gap-12 items-center"
+            >
+              <div class="flex-1">
+                <span
+                  class="material-symbols-outlined text-primary text-4xl mb-8"
+                  data-icon="room_service"
+                  >room_service</span
+                >
+                <h3 class="font-headline text-3xl mb-4">Lifestyle Concierge</h3>
+                <p class="text-secondary text-lg mb-8 leading-relaxed">
+                  Bespoke integration into island life—from school placements
+                  and medical networking to private chef arrangements.
+                </p>
+                <a
+                  class="text-primary font-bold flex items-center gap-2"
+                  href="#"
+                >
+                  Discover More
+                  <span
+                    class="material-symbols-outlined"
+                    data-icon="chevron_right"
+                    >chevron_right</span
+                  >
+                </a>
+              </div>
+              <div
+                class="w-full md:w-64 aspect-square rounded-full overflow-hidden"
+              >
+                <img
+                  alt="Spa and wellness lifestyle"
+                  class="w-full h-full object-cover"
+                  data-alt="Detail of a luxury spa setting with tropical flowers and stone elements representing a high-end lifestyle concierge service"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUJObdmrTOewVaOy9kCDRJ-SJl3it8XIn9UxSLg9Iox2vlaGDtsvQPmKwD8hZEmlTbCFdByuwyN83d6ih7lEnaNTM21JimTZRTRgnFfTY1pfxngBvbdADLxVTIc5igX4BophORqHD1KYLQTMC1SPzS0pbKzZTXiUydELoHvr0mUv3hTBHrYET_e2qYJ0K8sU7sEYgiczbGeMUQl_H97v83j3aCjaAee1zWn4y3bi11k_-TDf_1OJg-5zDhmSgQUd1uZrdrRfKcGm5x"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- How It Works Section -->
+      <section class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-24">
+            <span
+              class="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block"
+              >The Process</span
+            >
+            <h2 class="font-headline text-4xl md:text-6xl text-on-surface">
+              Effortless Relocation
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+            <!-- Connecting line for desktop -->
+            <div
+              class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-outline-variant/20 -z-10"
+            ></div>
+            <!-- Step 1 -->
+            <div class="flex flex-col items-center text-center">
+              <div
+                class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-headline text-3xl mb-8 ring-8 ring-background"
+              >
+                1
+              </div>
+              <h4 class="font-headline text-2xl mb-4">Consultation</h4>
+              <p class="text-secondary leading-relaxed">
+                A private session to understand your specific relocation needs
+                and timeline.
+              </p>
+            </div>
+            <!-- Step 2 -->
+            <div class="flex flex-col items-center text-center">
+              <div
+                class="w-20 h-20 rounded-full bg-surface-container-highest flex items-center justify-center text-primary font-headline text-3xl mb-8 ring-8 ring-background"
+              >
+                2
+              </div>
+              <h4 class="font-headline text-2xl mb-4">Strategic Plan</h4>
+              <p class="text-secondary leading-relaxed">
+                We develop a custom roadmap covering all legal, logistical, and
+                personal requirements.
+              </p>
+            </div>
+            <!-- Step 3 -->
+            <div class="flex flex-col items-center text-center">
+              <div
+                class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline text-3xl mb-8 ring-8 ring-background"
+              >
+                3
+              </div>
+              <h4 class="font-headline text-2xl mb-4">Seamless Relocate</h4>
+              <p class="text-secondary leading-relaxed">
+                Arrive in Lombok with every detail handled, from your airport
+                pickup to your villa keys.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials -->
+      <section class="py-32 px-8 bg-surface-container">
+        <div class="max-w-5xl mx-auto">
+          <div
+            class="relative p-12 md:p-20 bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden"
+          >
+            <span
+              class="material-symbols-outlined text-primary-fixed-dim absolute -top-10 -left-10 text-[15rem] opacity-20"
+              data-icon="format_quote"
+              >format_quote</span
+            >
+            <div class="relative z-10">
+              <p
+                class="font-headline text-2xl md:text-3xl text-on-surface italic leading-relaxed mb-12"
+              >
+                "Moving from London to Lombok seemed like a monumental task.
+                Movtrust transformed the experience into a vacation. Every
+                detail, from our KITAS to our daughter's school placement, was
+                handled with absolute professionalism."
+              </p>
+              <div class="flex items-center gap-6">
+                <div class="w-16 h-16 rounded-full overflow-hidden">
+                  <img
+                    alt="Client portrait"
+                    class="w-full h-full object-cover"
+                    data-alt="Professional portrait of a middle-aged European man smiling, blurred natural background, soft lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9EFlnGjfsOPqCOZvnN8mvjytE8gf9ifoxns9_hnNZj4tXkG_cU_IurjY7aR335d7LuM7WaL-j1uLoCV9r0P9qGp5_vAeWqdHVeCBbQYCUIgR8epsw9eQvoJE22dvg83XT3AWICXa-CIVn1dt7wzWFqR3UGAiWR-fDbvLM5DXvJu2Nn7lj8rO-A_PS_0n5YZf9VBsSa6u-tkdImbRCOLTH5pal1Jtmibl2JxakSKMGsSlH1OtiVPWHeFdhSou2kvZPnbPkL2JvLBM1"
+                  />
+                  [3/26/26 9:44 PM] Teguh Anggar:
+                </div>
+                <div>
+                  <h5 class="font-bold text-on-surface">Mark Thompson</h5>
+                  <p class="text-secondary text-sm">
+                    International Real Estate Consultant
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="py-32 px-8">
+        <div
+          class="max-w-7xl mx-auto rounded-3xl cta-gradient p-16 md:p-24 text-center relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"
+          ></div>
+          <div class="relative z-10">
+            <h2 class="font-headline text-4xl md:text-6xl text-on-primary mb-8">
+              Ready for your island life?
+            </h2>
+            <p
+              class="text-on-primary/80 text-lg md:text-xl max-w-2xl mx-auto mb-12"
+            >
+              Schedule a complimentary 15-minute introductory call with our
+              senior consultants today.
+            </p>
+            <button
+              class="bg-white text-primary px-12 py-5 rounded-md font-label font-bold text-lg hover:shadow-2xl transition-all active:scale-95"
+            >
+              Book Your Consultation
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-slate-950 w-full pt-16 pb-8">
+      <div
+        class="bg-amber-100/10 dark:bg-slate-800 h-px mx-auto max-w-7xl mb-12"
+      ></div>
+      <div
+        class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12"
+      >
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <span
+              class="material-symbols-outlined text-amber-700 dark:text-amber-500 text-2xl"
+              data-icon="waves"
+              >waves</span
+            >
+            <span class="text-xl font-serif text-slate-900 dark:text-slate-100"
+              >Movtrust</span
+            >
+          </div>
+          <p
+            class="text-slate-500 dark:text-slate-400 font-sans text-sm tracking-wide leading-relaxed"
+          >
+            Premium relocation and lifestyle management for the discerning expat
+            community in Lombok, Indonesia.
+          </p>
+        </div>
+        <div>
+          <h6
+            class="text-amber-700 dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-6"
+          >
+            Services
+          </h6>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors font-sans text-sm tracking-wide"
+                href="#"
+                >Visa Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors font-sans text-sm tracking-wide"
+                href="#"
+                >Real Estate</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors font-sans text-sm tracking-wide"
+                href="#"
+                >Transport</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6
+            class="text-amber-700 dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-6"
+          >
+            Company
+          </h6>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors font-sans text-sm tracking-wide"
+                href="#"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors font-sans text-sm tracking-wide"
+                href="#"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-300 transition-colors font-sans text-sm tracking-wide"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6
+            class="text-amber-700 dark:text-amber-500 font-bold text-sm uppercase tracking-widest mb-6"
+          >
+            Connect
+          </h6>
+          <div class="flex gap-4 mb-6">
+            <a
+              class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-xl" data-icon="public"
+                >public</span
+              >
+            </a>
+            <a
+              class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-slate-500 hover:border-primary hover:text-primary transition-all"
+              href="#"
+            >
+              <span class="material-symbols-outlined text-xl" data-icon="mail"
+                >mail</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-amber-100/10 dark:border-slate-800 text-center"
+      >
+        <p
+          class="text-slate-500 dark:text-slate-400 font-sans text-sm tracking-wide"
+        >
+          © 2024 Movtrust Lombok. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
